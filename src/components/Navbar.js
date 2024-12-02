@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 
-export default function Navbar() {
-  const [user, setUser] = useState(null);
+export default function Navbar({user}) {
+  // const [user, setUser] = useState(null);
 
-  const handleLogin = () => {
-    setUser({
-      name: "Birat",
-    });
-    console.log(user);
-  };
-
+  // const handleLogin = () => {
+  //   setUser({
+  //     name: "Birat",
+  //   });
+  //   console.log(user);
+  // };
+  const [userVar, setUser] = useState(null);  
   const handleLogout = () => {
     setUser(null);
   };
@@ -150,7 +151,7 @@ export default function Navbar() {
                       aria-expanded="false"
                     >
                       <i
-                        class="fa fa-user mx-2"
+                        className="fa fa-user mx-2"
                         aria-hidden="true"
                         style={{ fontSize: 25 }}
                       ></i>
@@ -195,14 +196,13 @@ export default function Navbar() {
                     </button>
                   </li>
                   <li>
-                    <button
+                    <Link
                       className="btn btn-success"
-                      onClick={handleLogin}
                       type="submit"
-                      href="/"
+                      to = "/login"
                     >
-                      Log in
-                    </button>
+                      Login                      
+                    </Link>
                   </li>
                 </>
               )}
