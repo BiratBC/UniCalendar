@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* For hover dropdown */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
+  left: auto;
+}
+#logoutBtn{
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+}
