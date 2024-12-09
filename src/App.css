@@ -27,12 +27,59 @@
 .App-link {
   color: #61dafb;
 }
+/* @media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+.mainContainer {
+  display: flex;
+}
+h1{
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.hostContainer {
+  /* display: flex; */
+  margin-left: 300px;
+}
+
+.form-row {
+  display: flex;
+  gap: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.input-group-prepend {
+  gap: 20px;
 }

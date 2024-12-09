@@ -19,7 +19,7 @@ export default function Navbar({user}) {
     <>
       <nav
         className="navbar navbar-expand-lg bg-body-tertiary"
-        style={{ height: 70 }}
+        style={{ height: 70, width : "100vw", position : "fixed", top : 0 }}
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
@@ -135,7 +135,7 @@ export default function Navbar({user}) {
                         className="fa fa-bell"
                         aria-hidden="true"
                         style={{
-                          fontSize: 23,
+                          fontSize: 22,
                           color: "black",
                           cursor: "pointer",
                         }}
@@ -159,9 +159,11 @@ export default function Navbar({user}) {
                     </a>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="/">
+                        <Link className="dropdown-item"
+                              type="submit"
+                              to="/profile">
                           Profile
-                        </a>
+                        </Link>
                       </li>
                       <li >
                         <a className="dropdown-item" href="/">

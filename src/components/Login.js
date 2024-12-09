@@ -19,8 +19,8 @@ export default function Login({onLogin}) {
   };
   return (
     <>
-      <section className="">
-        <div className="container-fluid">
+      <section className="" style={{marginTop : 70}}>
+        <div className="container-fluid" style={{height : 200}}>
           <div className="row">
             <div className="col-sm-6 text-black">
               <div className="px-0 ms-xl-4">
